@@ -1,0 +1,32 @@
+AudioReverb Voice - TeamSpeak 3 plugin (room reverb on TFAR direct speech + enhanced TFAR radio)
+================================================================================================
+
+Install (TeamSpeak 3.6, 64-bit - TeamSpeak 5/6 and 32-bit TeamSpeak can't load TS3 plugins):
+  Double-click AudioReverbVoice.ts3_plugin and confirm TeamSpeak's installer.
+  (Updating: just install the new .ts3_plugin over the old one and restart TeamSpeak.)
+  - or -
+  Close TeamSpeak, copy audioreverb_voice_win64.dll to %APPDATA%\TS3Client\plugins,
+  start TeamSpeak, then Settings > Plugins > tick "AudioReverb Voice".
+
+Use:
+  Load @AudioReverbConv in Arma with TFAR. Nearby players' voices then take on the room you're
+  in. Radio stays dry. Options: Addon Options > AudioReverb > Voice (TFAR).
+  TFAR radios also get a better radio sound: handset band, radio compression, hiss, and fading,
+  crackle and dropouts as the signal weakens (TFAR still decides who you hear and how far).
+  Options: Addon Options > AudioReverb > Radio (TFAR) - switch it off to A/B against TFAR's own.
+  Only changes what YOU hear; players without the plugin hear stock TFAR.
+
+Check it's working - debug HUD in Arma ([] call AR_fnc_debug;):
+  "TS plugin: connected (TS 3.6.x), hearing 1, in room 1 [Name]"   -> working
+  "TS plugin: not detected"            -> plugin not installed/enabled in TeamSpeak (Settings > Plugins)
+  "TS plugin: waiting for Arma"        -> TeamSpeak sees no Arma data: is @AudioReverbConv loaded?
+  "..., dry: Name"                     -> that player is talking but Arma says they're out of direct-speech range
+  "radio: TFAR 1.x, enhanced, 1 stream(s), signal 80%"  -> radio effect working (shows while someone transmits)
+  "radio: TFAR plugin not loaded in TeamSpeak"           -> TFAR's TeamSpeak plugin is off/not installed
+  "radio: TFAR x not supported, TFAR's own sound"        -> a TFAR build this plugin doesn't know; send the log
+
+If it doesn't work, send these two files (in %LOCALAPPDATA%\Arma 3):
+  AudioReverb.log       (Arma side)
+  AudioReverbVoice.log  (TeamSpeak side: link state and every speaker it heard, matched or not)
+
+The plugin does nothing unless the Arma mod is running, so it is safe to leave enabled.
