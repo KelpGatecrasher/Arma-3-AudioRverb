@@ -1,0 +1,49 @@
+Impulse responses in irs\openair\ are derived from the OpenAIR library
+(Open Acoustic Impulse Response Library), University of York - https://www.openair.hosted.york.ac.uk/
+Each is licensed under the Creative Commons Attribution 4.0 International License
+(https://creativecommons.org/licenses/by/4.0/).
+
+Changes made for AudioReverb (tools/prepare_irs.py): converted to stereo (B-format decoded to
+virtual cardioids at +/-90 degrees, mid/side decoded, or mono decorrelated), direct sound removed
+and aligned to t = 0, 40 Hz high-pass, resampled to 44.1 kHz, truncated to 4.2 s with a fade-out,
+peak-normalised, saved as 32-bit float WAV.
+
+open_koli.wav
+    "Koli National Park - Summer" (site 1, 1-way, B-format)
+    Measurement team: Andrew Chadwick, Simon Shelley. Captured 17/07/2013.
+    https://www.openair.hosted.york.ac.uk/?page_id=577
+
+forest_wheldrake.wav
+    "Abies Grandis Forest, Wheldrake Wood" (S1R1, mid/side)
+    Measurement team: Sinuo Feng, Frank Stevens, Andrew Chadwick. Captured 22/06/2023.
+    https://www.openair.hosted.york.ac.uk/?page_id=1293
+
+urban_alcuin.wav
+    "Alcuin College, University of York" (s1r1, B-format)
+    Measurement team: Francis Stevens, Simon Shelley. Captured 16/08/2013.
+    https://www.openair.hosted.york.ac.uk/?page_id=416
+
+urbandense_trollers.wav
+    "Troller's Gill" (site 2, 1-way, B-format)
+    Measurement team: Andrew Chadwick, Simon Shelley. Captured 09/07/2013.
+    https://www.openair.hosted.york.ac.uk/?page_id=745
+
+indoorsmall_stairway.wav
+    "Stairway, University of York" (ORTF stereo)
+    Measurement team: Simon Shelley. Captured 13/07/2010.
+    https://www.openair.hosted.york.ac.uk/?page_id=678
+
+indoormedium_typing.wav
+    "Terry's Typing Room" (ORTF stereo)
+    Measurement team: Dr. Damian T. Murphy. Captured 03/12/2006.
+    https://www.openair.hosted.york.ac.uk/?page_id=740
+
+indoorlarge_warehouse.wav
+    "Terry's Factory Warehouse" (stereo)
+    Measurement team: Dr. Damian T. Murphy. Captured 22/10/2006.
+    https://www.openair.hosted.york.ac.uk/?page_id=735
+
+hangar_t2.wav
+    "T2 Hangar, Yorkshire Air Museum" (S1R1 sweep; source channels identical, used as mono)
+    Measurement team: Frank Stevens, Richie Cully, Santiago Hoyos. Captured 08/03/2023.
+    https://www.openair.hosted.york.ac.uk/?page_id=1274
